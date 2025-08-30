@@ -1,16 +1,73 @@
 # ANCAP Screensaver
 
-[![GitHub stars](https://img.shields.io/github/stars/monarch-one/ancap-screensaver?style=social)](https://github.com/monarch-one/ancap-screensaver)
-[![GitHub forks](https://img.shields.io/github/forks/monarch-one/ancap-screensaver?style=social)](https://github.com/monarch-one/ancap-screensaver)
-[![GitHub license](https://img.shields.io/github/license/monarch-one/ancap-screensaver)](https://github.com/monarch-one/ancap-screensaver/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/badge/Stars-⭐-yellow)](https://github.com/monarch-one/ancap-screensaver)
+[![GitHub forks](https://img.shields.io/badge/Forks-🔀-blue)](https://github.com/monarch-one/ancap-screensaver)
+[![GitHub license](https://img.shields.io/badge/License-MIT-green)](https://github.com/monarch-one/ancap-screensaver/blob/main/LICENSE)
 [![Price](https://img.shields.io/badge/Price-Free-brightgreen)](https://github.com/monarch-one/ancap-screensaver)
-[![Version](https://img.shields.io/badge/Version-Full-blue)](https://github.com/monarch-one/ancap-screensaver#readme)
-
-Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcocapitalistas con un diseño moderno y tipografía profesional. **Completamente gratuito y de código abierto para la comunidad libertaria.**
+[![Version](https://img.shields.io/badge/Version-v1.1.1-blue)](https://github.com/monarch-one/ancap-screensaver#readme)
 
 > **🆓 [COMPLETAMENTE GRATUITO](https://github.com/monarch-one/ancap-screensaver#readme) | 💻 [CÓDIGO ABIERTO](https://github.com/monarch-one/ancap-screensaver)**
 
-## ✨ Características
+## 🚀 **DESCARGA INMEDIATA**
+
+### 📦 **Instaladores Multiplataforma v1.1.1:**
+
+| Plataforma | Descarga | Instalación |
+|------------|----------|-------------|
+| **🍎 macOS** | [ANCAP-Screensaver-macOS-v1.1.1.pkg](installers/output/ANCAP-Screensaver-macOS-v1.1.1.pkg) | Instalador nativo (.pkg) |
+| **🐧 Linux** | [ANCAP-Screensaver-Linux-v1.1.1.zip](installers/output/ANCAP-Screensaver-Linux-v1.1.1.zip) | Paquete .deb con instrucciones |
+| **🪟 Windows** | [ANCAP-Screensaver-Windows-v1.1.1.zip](installers/output/ANCAP-Screensaver-Windows-v1.1.1.zip) | Archivo .scr con archivos |
+| **🌍 Universal** | [ANCAP-Screensaver-Universal-v1.1.1.zip](installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip) | Todos los instaladores |
+
+### 🔧 **Instalación Rápida por Plataforma:**
+
+#### **🍎 macOS (Recomendado):**
+```bash
+# Opción 1: Instalador automático (con alerta de seguridad)
+# Descarga el .pkg y haz doble clic
+
+# Opción 2: Instalador manual (SIN alertas de seguridad)
+curl -O https://raw.githubusercontent.com/monarch-one/ancap-screensaver/main/installers/macos/install-manual.sh
+chmod +x install-manual.sh
+sudo ./install-manual.sh
+```
+
+#### **🐧 Linux:**
+```bash
+# Descarga el .zip y extrae
+unzip ANCAP-Screensaver-Linux-v1.1.1.zip
+cd ancap-screensaver
+
+# Instalar manualmente
+sudo cp -R ANCAP.saver /usr/share/ancap-screensaver/
+sudo chmod -R 755 /usr/share/ancap-screensaver/
+```
+
+#### **🪟 Windows:**
+```bash
+# Descarga el .zip y extrae
+# Copia ANCAP.saver a C:\Windows\System32\
+# Copia ANCAP.scr a C:\Windows\System32\
+# Configura en Panel de Control > Pantalla > Protector de pantalla
+```
+
+## 📱 **Activación del Screensaver**
+
+### **Después de la instalación:**
+
+1. **Preferencias del Sistema** → **Escritorio y Protector de Pantalla**
+2. **Pestaña "Protector de Pantalla"**
+3. **Seleccionar "ANCAP"** de la lista
+4. **Configurar tiempo de espera**
+5. **Hacer clic en "Aplicar"**
+
+---
+
+## ✨ **¿Qué es ANCAP Screensaver?**
+
+Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcocapitalistas con un diseño moderno y tipografía profesional. **Completamente gratuito y de código abierto para la comunidad libertaria.**
+
+## 🎯 **Características Principales**
 
 - **Logo prominente**: Logo "GUARDIA NOCTURNA • LIBERTAS • IN TENEBRIS" en la parte superior
 - **Citas libertarias**: 25 citas auténticas de pensadores como Murray Rothbard, Ayn Rand, Milton Friedman, Javier Milei y Ron Paul
@@ -24,83 +81,31 @@ Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcoc
 - **Instalación nativa**: Instalador .pkg nativo de macOS incluido
 - **Completamente gratuito**: Sin limitaciones ni indicadores de venta
 
-## 🎨 Diseño Visual
+## 🎨 **Diseño Visual**
 
 - **Colores**: Fondo negro (#1a1a1a) con texto amarillo (#FCBE07)
-- **Logo**: 220px x 220px, posicionado en la parte superior
-- **Citas**: Tamaño 3.2em, peso normal, centradas
-- **Autor**: Tamaño 0.6em, peso negrita, debajo de las citas
-- **Distribución**: Logo (8%), Citas (60%), Autor (debajo)
+- **Logo**: 250px x 250px, posicionado en la parte superior (15%)
+- **Citas**: Tamaño 2.8em, peso normal, centradas
+- **Autor**: Tamaño 1.5em, peso negrita, debajo de las citas
+- **Distribución**: Logo (15%), Citas (50%), Autor (debajo)
 
-## 🛠️ Instalación
+## 🎯 **Citas Incluidas**
 
-### Para macOS:
-
-1. **Descarga** el archivo `ANCAP.saver`
-2. **Haz doble clic** en el archivo
-3. **Selecciona** "Instalar para todos los usuarios" o "Instalar solo para mí"
-4. **Ve a** Preferencias del Sistema > Escritorio y Salvapantallas
-5. **Selecciona** "ANCAP" de la lista
-6. **Configura** el tiempo de activación deseado
-
-### Para desarrollo:
-
-1. **Clona** el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/ancap-screensaver.git
-   cd ancap-screensaver
-   ```
-
-2. **Abre** `ANCAP.saver/Contents/Resources/index.html` en tu navegador para previsualizar
-
-3. **Modifica** las citas en el archivo `index.html` según tus preferencias
-
-## 📝 Personalización
-
-### Agregar nuevas citas:
-
-Edita el array `frasesLibertariasIngles` o `frasesLibertariasEspanol` en `index.html`:
-
-```javascript
-{ texto: "Tu nueva cita aquí.", autor: "Nombre del Autor" }
-```
-
-### Cambiar colores:
-
-Modifica las variables CSS en `index.html`:
-
-```css
-body {
-  background-color: #tu-color-fondo;
-  color: #tu-color-texto;
-}
-```
-
-### Ajustar timing:
-
-Cambia el valor en la función `setTimeout`:
-
-```javascript
-timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
-```
-
-## 🎯 Citas Incluidas
-
-### Pensadores destacados:
+### **Pensadores destacados:**
 - **Murray Rothbard** - Libertarianismo puro (5 citas)
 - **Ayn Rand** - Objetivismo y derechos individuales (5 citas)
 - **Milton Friedman** - Economía de libre mercado (5 citas)
 - **Javier Milei** - Libertarianismo argentino (5 citas)
 - **Ron Paul** - Libertarianismo político (5 citas)
 
-### Temas cubiertos:
+### **Temas cubiertos:**
 - Propiedad privada y derechos individuales
 - Libre mercado y economía
 - Libertad económica y personal
 - Crítica al estatismo
 - Principios libertarios fundamentales
 
-## 🔧 Tecnologías Utilizadas
+## 🔧 **Tecnologías Utilizadas**
 
 - **HTML5** - Estructura semántica
 - **CSS3** - Estilos y animaciones
@@ -127,9 +132,7 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 - **Sin limitaciones** - Experiencia completa gratuita
 - **Comunidad** - Crecimiento orgánico del movimiento
 
-**💻 [Ver código fuente →](https://github.com/monarch-one/ancap-screensaver)** | **⭐ [Dar estrella en GitHub →](https://github.com/monarch-one/ancap-screensaver)**
-
-## 📱 Compatibilidad
+## 📱 **Compatibilidad**
 
 - **Sistema**: macOS 10.14+ (con instalador nativo)
 - **Navegadores**: Chrome, Safari, Firefox, Edge (para desarrollo)
@@ -137,21 +140,48 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 - **Idiomas**: Español e inglés (detección automática)
 - **Instalación**: Instalador .pkg nativo de macOS incluido
 
-## 🚀 Descarga Rápida
+## 🛠️ **Desarrollo y Personalización**
 
-### 📦 Instaladores disponibles:
+### **Para desarrollo:**
 
-- **🍎 macOS**: [ANCAP-Screensaver-macOS-v1.1.0.pkg](installers/output/ANCAP-Screensaver-macOS-v1.1.0.pkg) - Instalador nativo
-- **💻 Código fuente**: [ANCAP-Screensaver-v1.1.0.zip](ANCAP-Screensaver-v1.1.0.zip) - Proyecto completo
-- **📱 Instalador macOS**: [ANCAP-Screensaver-macOS-v1.1.0.zip](ANCAP-Screensaver-macOS-v1.1.0.zip) - ZIP del instalador
+1. **Clona** el repositorio:
+   ```bash
+   git clone https://github.com/monarch-one/ancap-screensaver.git
+   cd ancap-screensaver
+   ```
 
-### 🔧 Instalación en macOS:
-1. Descarga el instalador `.pkg`
-2. Doble-click para instalar
-3. Ve a Preferencias del Sistema > Escritorio y Protector de Pantalla
-4. Selecciona 'ANCAP' de la lista
+2. **Abre** `ANCAP.saver/Contents/Resources/index.html` en tu navegador para previsualizar
 
-## 🤝 Contribuciones
+3. **Modifica** las citas en el archivo `index.html` según tus preferencias
+
+### **Agregar nuevas citas:**
+
+Edita el array `libertarianQuotesEnglish` o `libertarianQuotesSpanish` en `index.html`:
+
+```javascript
+{ texto: "Tu nueva cita aquí.", autor: "Nombre del Autor" }
+```
+
+### **Cambiar colores:**
+
+Modifica las variables CSS en `index.html`:
+
+```css
+body {
+  background-color: #tu-color-fondo;
+  color: #tu-color-texto;
+}
+```
+
+### **Ajustar timing:**
+
+Cambia el valor en la función `setTimeout`:
+
+```javascript
+timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
+```
+
+## 🤝 **Contribuciones**
 
 ¡Las contribuciones son bienvenidas! Si quieres agregar más citas, mejorar el diseño o agregar nuevas funcionalidades:
 
@@ -161,22 +191,22 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 4. **Push** a la rama (`git push origin feature/nueva-funcionalidad`)
 5. **Crea** un Pull Request
 
-## 📄 Licencia
+## 📄 **Licencia**
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 🙏 Agradecimientos
+## 🙏 **Agradecimientos**
 
 - **Pensadores libertarios** por sus ideas inspiradoras
 - **JetBrains** por la tipografía JetBrains Mono
 - **Comunidad open source** por las herramientas utilizadas
 
-## 📞 Contacto
+## 📞 **Contacto**
 
 Si tienes preguntas, sugerencias o quieres contribuir:
 
-- **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
-- **Issues**: [Reportar bug o solicitar feature](https://github.com/tu-usuario/ancap-screensaver/issues)
+- **GitHub**: [@monarch-one](https://github.com/monarch-one)
+- **Issues**: [Reportar bug o solicitar feature](https://github.com/monarch-one/ancap-screensaver/issues)
 
 ---
 
