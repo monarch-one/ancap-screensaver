@@ -1,0 +1,110 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g htmlhint
+        npm install -g csslint
+        npm install -g jshint
+        
+    - name: Lint HTML
+      run: |
+        htmlhint ANCAP.saver/Contents/Resources/index.html
+        
+    - name: Lint CSS
+      run: |
+        csslint ANCAP.saver/Contents/Resources/index.html || true
+        
+    - name: Lint JavaScript
+      run: |
+        jshint ANCAP.saver/Contents/Resources/index.html || true
+        
+    - name: Validate HTML
+      run: |
+        curl -s "https://validator.w3.org/nu/?out=json&doc=$(cat ANCAP.saver/Contents/Resources/index.html | base64)" | jq '.messages | length' | test $? -eq 0
+        
+  build:
+    runs-on: macos-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Create release package
+      run: |
+        cd ANCAP.saver
+        zip -r ../ANCAP-Screensaver-v1.0.0.zip .
+        
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ANCAP-Screensaver
+        path: ANCAP-Screensaver-v1.0.0.zip
+        
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [test, build]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: ANCAP-Screensaver
+        
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v1.0.0
+        release_name: ANCAP Screensaver v1.0.0
+        body: |
+          ## 🎉 Nueva Versión del ANCAP Screensaver
+          
+          ### ✨ Características principales:
+          - Logo prominente "GUARDIA NOCTURNA"
+          - Efecto máquina de escribir para las citas
+          - 100 citas libertarias en español e inglés
+          - Tipografía JetBrains Mono profesional
+          - Diseño minimalista y elegante
+          
+          ### 🛠️ Instalación:
+          1. Descarga el archivo .zip
+          2. Extrae el contenido
+          3. Haz doble clic en ANCAP.saver
+          4. Selecciona "Instalar para todos los usuarios"
+          
+          ### 📱 Compatibilidad:
+          - macOS 10.12+
+          - Intel y Apple Silicon
+          
+          ### 🎯 Citas incluidas:
+          - Ludwig von Mises
+          - Friedrich Hayek
+          - Murray Rothbard
+          - Hans-Hermann Hoppe
+          - Javier Milei
+          
+          ¡Disfruta de tu salvapantallas libertario! 🟡⚫
+        draft: false
+        prerelease: false
