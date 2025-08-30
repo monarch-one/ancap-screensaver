@@ -8,38 +8,38 @@
 
 > **🆓 [COMPLETAMENTE GRATUITO](https://github.com/monarch-one/ancap-screensaver#readme) | 💻 [CÓDIGO ABIERTO](https://github.com/monarch-one/ancap-screensaver)**
 
-## 🚀 **DESCARGA INMEDIATA**
+## Descarga
 
-### 📦 **Instaladores Multiplataforma v1.1.1:**
+### Instaladores v1.1.1:
 
-| Plataforma | Descarga | Instalación |
-|------------|----------|-------------|
-| **🍎 macOS** | [ANCAP-Screensaver-macOS-v1.1.1.pkg](installers/output/ANCAP-Screensaver-macOS-v1.1.1.pkg) | Instalador nativo (.pkg) |
-| **🐧 Linux** | [ANCAP-Screensaver-Linux-v1.1.1.zip](installers/output/ANCAP-Screensaver-Linux-v1.1.1.zip) | Paquete .deb con instrucciones |
-| **🪟 Windows** | [ANCAP-Screensaver-Windows-v1.1.1.zip](installers/output/ANCAP-Screensaver-Windows-v1.1.1.zip) | Archivo .scr con archivos |
-| **🌍 Universal** | [ANCAP-Screensaver-Universal-v1.1.1.zip](installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip) | Todos los instaladores |
+| Plataforma | Descarga | Tipo |
+|------------|----------|------|
+| macOS | [ANCAP-Screensaver-macOS-v1.1.1.pkg](installers/output/ANCAP-Screensaver-macOS-v1.1.1.pkg) | Instalador nativo |
+| Linux | [ANCAP-Screensaver-Linux-v1.1.1.zip](installers/output/ANCAP-Screensaver-Linux-v1.1.1.zip) | Paquete con instrucciones |
+| Windows | [ANCAP-Screensaver-Windows-v1.1.1.zip](installers/output/ANCAP-Screensaver-Windows-v1.1.1.zip) | Archivo .scr con archivos |
+| Universal | [ANCAP-Screensaver-Universal-v1.1.1.zip](installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip) | Todos los instaladores |
 
-### 🔧 **Instalación Rápida por Plataforma:**
+### Instalación por Plataforma:
 
-#### **🍎 macOS (Recomendado):**
+#### macOS:
 ```bash
-# Opción 1: Instalador automático (con alerta de seguridad)
+# Opción 1: Instalador automático
 # Descarga el .pkg y haz doble clic
 
-# Opción 2: Instalador manual (SIN alertas de seguridad)
+# Opción 2: Instalador manual (sin alertas de seguridad)
 curl -O https://raw.githubusercontent.com/monarch-one/ancap-screensaver/main/installers/macos/install-manual.sh
 chmod +x install-manual.sh
 sudo ./install-manual.sh
 ```
 
-**📱 Después de la instalación:**
-1. **Preferencias del Sistema** → **Escritorio y Protector de pantalla**
-2. **Pestaña "Protector de pantalla"**
-3. **Seleccionar "ANCAP"** de la lista
-4. **Configurar "Iniciar protector de pantalla después de"** (tiempo de inactividad)
-5. **Hacer clic en "Aceptar"**
+**Después de la instalación:**
+1. Preferencias del Sistema → Escritorio y Protector de pantalla
+2. Pestaña "Protector de pantalla"
+3. Seleccionar "ANCAP" de la lista
+4. Configurar "Iniciar protector de pantalla después de" (tiempo de inactividad)
+5. Hacer clic en "Aceptar"
 
-#### **🐧 Linux:**
+#### Linux:
 ```bash
 # Descarga el .zip y extrae
 unzip ANCAP-Screensaver-Linux-v1.1.1.zip
@@ -50,7 +50,7 @@ sudo cp -R ANCAP.saver /usr/share/ancap-screensaver/
 sudo chmod -R 755 /usr/share/ancap-screensaver/
 ```
 
-#### **🪟 Windows:**
+#### Windows:
 ```bash
 # Descarga el .zip y extrae
 # Copia ANCAP.saver a C:\Windows\System32\
@@ -58,15 +58,15 @@ sudo chmod -R 755 /usr/share/ancap-screensaver/
 # Configura en Panel de Control > Pantalla > Protector de pantalla
 ```
 
-## 📱 **Activación del Screensaver**
+## Activación del Screensaver
 
-### **Después de la instalación:**
+### Después de la instalación:
 
-1. **Preferencias del Sistema** → **Escritorio y Protector de Pantalla**
-2. **Pestaña "Protector de pantalla"**
-3. **Seleccionar "ANCAP"** de la lista
-4. **Configurar "Iniciar protector de pantalla después de"** (tiempo de inactividad)
-5. **Hacer clic en "Aceptar"**
+1. Preferencias del Sistema → Escritorio y Protector de Pantalla
+2. Pestaña "Protector de pantalla"
+3. Seleccionar "ANCAP" de la lista
+4. Configurar "Iniciar protector de pantalla después de" (tiempo de inactividad)
+5. Hacer clic en "Aceptar"
 
 ---
 
