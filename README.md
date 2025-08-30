@@ -10,14 +10,17 @@
 
 ## Descarga
 
-### Instaladores v1.1.1:
+### 🚀 **DESCARGA TODO EN UNO:**
+**[📦 DESCARGAR TODOS LOS INSTALADORES](installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip)** *(ZIP con macOS, Linux y Windows)*
+
+### Instaladores individuales v1.1.1:
 
 | Plataforma | Descarga | Tipo |
 |------------|----------|------|
 | macOS | [ANCAP-Screensaver-macOS-v1.1.1.pkg](installers/output/ANCAP-Screensaver-macOS-v1.1.1.pkg) | Instalador nativo |
 | Linux | [ANCAP-Screensaver-Linux-v1.1.1.zip](installers/output/ANCAP-Screensaver-Linux-v1.1.1.zip) | Paquete con instrucciones |
 | Windows | [ANCAP-Screensaver-Windows-v1.1.1.zip](installers/output/ANCAP-Screensaver-Windows-v1.1.1.zip) | Archivo .scr con archivos |
-| Universal | [ANCAP-Screensaver-Universal-v1.1.1.zip](installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip) | Todos los instaladores |
+| Universal | [ANCAP-Screensaver-Universal-v1.1.1.zip](installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip) | **Todos los instaladores (RECOMENDADO)** |
 
 ### Instalación por Plataforma:
 
@@ -56,6 +59,19 @@ sudo chmod -R 755 /usr/share/ancap-screensaver/
 # Copia ANCAP.saver a C:\Windows\System32\
 # Copia ANCAP.scr a C:\Windows\System32\
 # Configura en Panel de Control > Pantalla > Protector de pantalla
+```
+
+#### Universal (Recomendado):
+```bash
+# Descarga el ZIP universal y extrae
+unzip ANCAP-Screensaver-Universal-v1.1.1.zip
+
+# Contiene:
+# - macOS: ANCAP-Screensaver-macOS-v1.1.1.pkg
+# - Linux: ANCAP-Screensaver-Linux-v1.1.1.zip  
+# - Windows: ANCAP-Screensaver-Windows-v1.1.1.zip
+
+# Instala según tu plataforma
 ```
 
 ## Activación del Screensaver
