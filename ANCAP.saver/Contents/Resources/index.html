@@ -9,19 +9,24 @@
   <!-- Fuente principal: JetBrains Mono -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #FCBE07;
+      --background-color: #1a1a1a;
+      --font-family: 'JetBrains Mono', monospace;
+      --transition: opacity 2s ease;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100vh;
       width: 100vw;
-      font-family: 'JetBrains Mono', monospace;
-      background-color: #1a1a1a;
-      color: #FCBE07;
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--primary-color);
       overflow: hidden;
       position: relative;
     }
-    
-
 
     .frase-libertaria {
       position: fixed;
@@ -31,13 +36,12 @@
       text-align: center;
       font-size: 3.2em;
       font-weight: 400;
-      font-style: normal;
       line-height: 1.3;
       width: 90%;
       max-width: 1200px;
       opacity: 0;
-      transition: opacity 2s ease;
-      font-family: 'JetBrains Mono', monospace;
+      transition: var(--transition);
+      font-family: var(--font-family);
       letter-spacing: -0.01em;
       word-break: normal;
       overflow-wrap: break-word;
@@ -57,14 +61,24 @@
       font-size: 0.6em;
       font-weight: 700;
       opacity: 0;
-      transition: opacity 2s ease;
-      font-family: 'JetBrains Mono', monospace;
+      transition: var(--transition);
+      font-family: var(--font-family);
       letter-spacing: 0.02em;
       margin-top: 2em;
     }
 
     .frase-autor.visible {
       opacity: 1;
+    }
+
+    .logo-principal {
+      position: fixed;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      height: 220px;
+      z-index: 10;
     }
 
 
@@ -86,8 +100,8 @@
 <body>
 
 
-  <!-- Logo simple sin CSS -->
-  <img src="MARCA GUARDIA NOCTURNA-transparente.png" alt="Guardia Nocturna" id="logoGuardiaNocturna" style="position: fixed; top: 8%; left: 50%; transform: translateX(-50%); width: 220px; height: 220px; z-index: 10;">
+  <!-- Logo optimizado -->
+  <img src="MARCA GUARDIA NOCTURNA-transparente.png" alt="Guardia Nocturna" id="logoGuardiaNocturna" class="logo-principal">
 
   <div class="frase-libertaria" id="fraseLibertaria">
     <div id="textoFrase"></div>
@@ -95,10 +109,16 @@
   </div>
 
   <script>
-    // Detectar idioma del sistema
-    const idiomaDelSistema = navigator.language || navigator.userLanguage;
-    const esEspanol = idiomaDelSistema.startsWith('es');
-    console.log(`Idioma detectado: ${idiomaDelSistema}, usando ${esEspanol ? 'español' : 'inglés'}`);
+    // Constantes y configuración
+    const IDIOMA_SISTEMA = navigator.language || navigator.userLanguage;
+    const ES_ESPANOL = IDIOMA_SISTEMA.startsWith('es');
+    const TIMEOUT_AUTOMATICO = 40000;
+    const DELAY_AUTOR = 500;
+    const DELAY_TRANSICION = 500;
+    const VELOCIDAD_TEXTO = 80;
+    const VELOCIDAD_AUTOR = 100;
+    
+    console.log(`Idioma detectado: ${IDIOMA_SISTEMA}, usando ${ES_ESPANOL ? 'español' : 'inglés'}`);
     
     const frasesLibertariasIngles = [
       // Ludwig von Mises (10 citas)
@@ -320,7 +340,7 @@
     ];
     
     // Seleccionar el array según el idioma del sistema
-    const frasesLibertarias = esEspanol ? frasesLibertariasEspanol : frasesLibertariasIngles;
+    const frasesLibertarias = ES_ESPANOL ? frasesLibertariasEspanol : frasesLibertariasIngles;
 
     let ultimaFrase = null;
     let fraseVisible = false;
@@ -374,64 +394,40 @@
 
       console.log('Mostrando frase:', fraseSeleccionada.texto);
       
-      // Si hay una frase visible, hacer transición suave
-      if (fraseVisible) {
+      // Función auxiliar para mostrar frase
+      const mostrarFrase = () => {
+        elementoFrase.classList.add('visible');
+        autorFrase.classList.add('visible');
+        
+                  // Efecto de máquina de escribir para el texto principal
+          typeWriter(textoFrase, fraseSeleccionada.texto, VELOCIDAD_TEXTO, function() {
+            // Cuando termine la cita, mostrar el autor
+            setTimeout(() => {
+              typeWriter(autorFrase, "— " + fraseSeleccionada.autor, VELOCIDAD_AUTOR);
+            }, DELAY_AUTOR);
+          });
+          
+          fraseVisible = true;
+          console.log(`${fraseVisible ? 'Nueva' : 'Primera'} frase con efecto de máquina de escribir`);
+          
+          // Programar siguiente cambio automático
+          timeoutAutomatico = setTimeout(mostrarFraseAleatoria, TIMEOUT_AUTOMATICO);
+        };
+        
         // Fade out de la frase actual
         elementoFrase.classList.remove('visible');
         autorFrase.classList.remove('visible');
         
-        setTimeout(() => {
-          // Mostrar nueva frase con efecto de máquina de escribir
-          elementoFrase.classList.add('visible');
-          autorFrase.classList.add('visible');
-          
-          // Efecto de máquina de escribir para el texto principal
-          typeWriter(textoFrase, fraseSeleccionada.texto, 80, function() {
-            // Cuando termine la cita, mostrar el autor
-            setTimeout(() => {
-              typeWriter(autorFrase, "— " + fraseSeleccionada.autor, 100);
-            }, 500);
-          });
-          
-          fraseVisible = true;
-          console.log('Nueva frase con efecto de máquina de escribir');
-          
-          // Programar siguiente cambio automático
-          timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000);
-        }, 500);
-      } else {
-        // Primera vez o no hay frase visible
-        elementoFrase.classList.remove('visible');
-        autorFrase.classList.remove('visible');
-        
-        setTimeout(() => {
-          elementoFrase.classList.add('visible');
-          autorFrase.classList.add('visible');
-          
-          // Efecto de máquina de escribir para la primera frase
-          typeWriter(textoFrase, fraseSeleccionada.texto, 80, function() {
-            // Cuando termine la cita, mostrar el autor
-            setTimeout(() => {
-              typeWriter(autorFrase, "— " + fraseSeleccionada.autor, 100);
-            }, 500);
-          });
-          
-          fraseVisible = true;
-          console.log('Primera frase con efecto de máquina de escribir');
-          
-          // Programar siguiente cambio automático
-          timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000);
-        }, 500);
-      }
+        // Mostrar nueva frase después de transición
+        setTimeout(mostrarFrase, DELAY_TRANSICION);
     }
 
     function actualizar() {
-      const ahora = new Date();
-      const s = ahora.getSeconds();
-
+      const s = new Date().getSeconds();
+      
       // Mostrar frase cada 42 segundos (40 segundos visible + 2 segundos para transición)
       if ((s % 42 === 0) && !fraseVisible) {
-        setTimeout(mostrarFraseAleatoria, 500);
+        setTimeout(mostrarFraseAleatoria, DELAY_TRANSICION);
       }
     }
 
