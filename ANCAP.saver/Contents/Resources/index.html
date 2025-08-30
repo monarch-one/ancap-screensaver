@@ -1,470 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-      <title>ANCAP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fuente principal: JetBrains Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #FCBE07;
-      --background-color: #1a1a1a;
-      --font-family: 'JetBrains Mono', monospace;
-      --transition: opacity 2s ease;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANCAP Screensaver - Libertarian Screensaver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FCBE07;
+            --background-color: #1a1a1a;
+            --font-family: 'JetBrains Mono', monospace;
+            --transition: all 0.3s ease;
+        }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      width: 100vw;
-      font-family: var(--font-family);
-      background-color: var(--background-color);
-      color: var(--primary-color);
-      overflow: hidden;
-      position: relative;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .quote-container {
-      position: fixed;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 3.2em;
-      font-weight: 400;
-      line-height: 1.3;
-      width: 90%;
-      max-width: 1200px;
-      opacity: 0;
-      transition: var(--transition);
-      font-family: var(--font-family);
-      letter-spacing: -0.01em;
-      word-break: normal;
-      overflow-wrap: break-word;
-      white-space: normal;
-    }
-    
-    #textoFrase {
-      position: relative;
-    }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            overflow: hidden;
+            user-select: none;
+            cursor: none;
+        }
 
-    .quote-container.visible {
-      opacity: 1;
-    }
+        .logo-principal {
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            z-index: 100;
+        }
 
-    .author-text {
-      text-align: center;
-      font-size: 0.6em;
-      font-weight: 700;
-      opacity: 0;
-      transition: var(--transition);
-      font-family: var(--font-family);
-      letter-spacing: 0.02em;
-      margin-top: 2em;
-    }
+        .quote-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 95%;
+            max-width: 1400px;
+            word-break: normal;
+            white-space: normal;
+            padding: 0 20px;
+        }
 
-    .author-text.visible {
-      opacity: 1;
-    }
+        #quoteText {
+            font-size: 2.8em;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 0.5em;
+        }
 
-    .logo-principal {
-      position: fixed;
-      top: 8%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 220px;
-      height: 220px;
-      z-index: 10;
-    }
-
-
-    
-
-    
+        .author-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-top: 1.5em;
+            opacity: 0;
+            transition: var(--transition);
+        }
 
 
 
 
-
-
-    
-
-    
-
-  </style>
+    </style>
 </head>
 <body>
-
-
-  <!-- Logo optimizado -->
-  <img src="MARCA GUARDIA NOCTURNA-transparente.png" alt="Guardia Nocturna" id="logoGuardiaNocturna" class="logo-principal">
-
-  <div class="quote-container" id="quoteContainer">
-    <div id="quoteText"></div>
-    <div class="author-text" id="authorText"></div>
-  </div>
-
-  <script>
-    // Constants and configuration
-    const SYSTEM_LANGUAGE = navigator.language || navigator.userLanguage;
-    const IS_SPANISH = SYSTEM_LANGUAGE.startsWith('es');
-    const AUTO_TIMEOUT = 40000;
-    const AUTHOR_DELAY = 500;
-    const TRANSITION_DELAY = 500;
-    const TEXT_SPEED = 80;
-    const AUTHOR_SPEED = 100;
+    <img src="MARCA GUARDIA NOCTURNA-transparente.png" alt="GUARDIA NOCTURNA • LIBERTAS • IN TENEBRIS" class="logo-principal">
     
-    console.log(`Language detected: ${SYSTEM_LANGUAGE}, using ${IS_SPANISH ? 'Spanish' : 'English'}`);
-    
-    const libertarianQuotesEnglish = [
-      // Ludwig von Mises (10 citas)
-      { text: "They cannot spend except by taking out of the pockets of some people for the benefit of others.", author: "Ludwig von Mises" },
-      { text: "Capitalism serves the masses through mass production systems.", author: "Ludwig von Mises" },
-      { text: "Government intervention makes situations worse, not better.", author: "Ludwig von Mises" },
-      { text: "Socialism rejects any system where humans live freely.", author: "Ludwig von Mises" },
-      { text: "Entrepreneurs profit by serving consumer needs effectively.", author: "Ludwig von Mises" },
-      { text: "Peace and not war is the father of all things.", author: "Ludwig von Mises" },
-      { text: "Economics studies human action, not material objects.", author: "Ludwig von Mises" },
-      { text: "Markets are democratic: every penny votes.", author: "Ludwig von Mises" },
-      { text: "Society arises from peace, not conflict.", author: "Ludwig von Mises" },
-      { text: "Human action is purposeful behavior.", author: "Ludwig von Mises" },
-      
-      // Friedrich Hayek (10 citas)
-      { text: "Economics demonstrates how little we know about designing society.", author: "Friedrich Hayek" },
-      { text: "The road to hell is paved with good intentions.", author: "Friedrich Hayek" },
-      { text: "Individual freedom rests on recognizing our universal ignorance.", author: "Friedrich Hayek" },
-      { text: "Competition is a discovery procedure.", author: "Friedrich Hayek" },
-      { text: "State planning makes individual planning impossible.", author: "Friedrich Hayek" },
-      { text: "Planning requires dictatorship for effective coercion.", author: "Friedrich Hayek" },
-      { text: "Private property foundations secure human freedom.", author: "Friedrich Hayek" },
-      { text: "Liberty means opportunity for good and wrong alike.", author: "Friedrich Hayek" },
-      { text: "Welfare states destroy individual responsibility completely.", author: "Friedrich Hayek" },
-      { text: "Knowledge is dispersed among millions of people.", author: "Friedrich Hayek" },
-      
-      // Murray Rothbard (10 citas)
-      { text: "The State is a gang of thieves writ large.", author: "Murray Rothbard" },
-      { text: "No one can threaten violence for good reasons.", author: "Murray Rothbard" },
-      { text: "The state: fiction for living at others' expense.", author: "Murray Rothbard" },
-      { text: "Libertarianism is the radical idea that other people are not your property.", author: "Murray Rothbard" },
-      { text: "The natural tendency of the state is inflation.", author: "Murray Rothbard" },
-      { text: "All government wars are unjust.", author: "Murray Rothbard" },
-      { text: "States enable crime on massive scales.", author: "Murray Rothbard" },
-      { text: "Easy compassion when others pay the costs.", author: "Murray Rothbard" },
-      { text: "Taxation: theft on grand and colossal scales.", author: "Murray Rothbard" },
-      { text: "States thrive on war unless defeated.", author: "Murray Rothbard" },
-      
-      // Ayn Rand (10 citas)
-      { text: "Government protects from criminals; Constitution protects from government.", author: "Ayn Rand" },
-      { text: "Individual rights aren't subject to majority votes.", author: "Ayn Rand" },
-      { text: "The smallest minority on earth is the individual.", author: "Ayn Rand" },
-      { text: "Government: most dangerous threat with legal force monopoly.", author: "Ayn Rand" },
-      { text: "Government's purpose: protect individual rights only.", author: "Ayn Rand" },
-      { text: "Trading by compulsion signals your destruction.", author: "Ayn Rand" },
-      { text: "Who will let me? Who will stop me?", author: "Ayn Rand" },
-      { text: "Capitalism: ideal system for rational beings.", author: "Ayn Rand" },
-      { text: "Flee anyone calling money evil's root.", author: "Ayn Rand" },
-      { text: "Truth belongs to those who seek it.", author: "Ayn Rand" },
-      
-      // Milton Friedman (10 citas)
-      { text: "Freedom before equality leads to both.", author: "Milton Friedman" },
-      { text: "Nothing is so permanent as a temporary government program.", author: "Milton Friedman" },
-      { text: "The government solution to a problem is usually as bad as the problem.", author: "Milton Friedman" },
-      { text: "Government in Sahara: sand shortage guaranteed.", author: "Milton Friedman" },
-      { text: "The free market enables voluntary cooperation.", author: "Milton Friedman" },
-      { text: "Freedom requires limited government and individual rights.", author: "Milton Friedman" },
-      { text: "Judge policies by results, not intentions.", author: "Milton Friedman" },
-      { text: "Inflation is taxation without legislation.", author: "Milton Friedman" },
-      { text: "Economic fallacies assume fixed pie thinking.", author: "Milton Friedman" },
-      { text: "Black markets enable free market operation.", author: "Milton Friedman" },
-      
-      // Adam Smith (10 citas)
-      { text: "Benevolence doesn't drive commerce, self-interest does.", author: "Adam Smith" },
-      { text: "The real tragedy of the poor is the poverty of their aspirations.", author: "Adam Smith" },
-      { text: "The propensity to truck, barter and exchange one thing for another is common to all men.", author: "Adam Smith" },
-      { text: "Peace, low taxes, and justice create prosperity.", author: "Adam Smith" },
-      { text: "Individuals maximize society's annual revenue naturally.", author: "Adam Smith" },
-      { text: "Simple operations limit intellectual development.", author: "Adam Smith" },
-      { text: "Labor: original payment for all things.", author: "Adam Smith" },
-      { text: "Private landlords reap where they never sowed.", author: "Adam Smith" },
-      { text: "Private excess rarely impoverishes; public waste often does.", author: "Adam Smith" },
-      { text: "Health, debt-free, clear conscience: perfect happiness.", author: "Adam Smith" },
-      
-      // Hans-Hermann Hoppe (10 citas)
-      { text: "Democracy: soft communism disguised as freedom.", author: "Hans-Hermann Hoppe" },
-      { text: "A tax-funded compulsory monopolist will predictably be corrupt and wasteful.", author: "Hans-Hermann Hoppe" },
-      { text: "Free contracts between rulers and starving subjects: sick joke.", author: "Hans-Hermann Hoppe" },
-      { text: "What is true, just, and beautiful is not determined by popular vote.", author: "Hans-Hermann Hoppe" },
-      { text: "The state is a territorial monopolist of compulsion and ultimate decision-making.", author: "Hans-Hermann Hoppe" },
-      { text: "Democracy virtually guarantees that only bad and dangerous men will ever rise to the top of government.", author: "Hans-Hermann Hoppe" },
-      { text: "No one is under any obligation to obey the state.", author: "Hans-Hermann Hoppe" },
-      { text: "If the right to vote were expanded to seven year olds, its sanctity would not be enhanced.", author: "Hans-Hermann Hoppe" },
-      { text: "Private property is the only solution to the problem of economic calculation.", author: "Hans-Hermann Hoppe" },
-      { text: "Money is a market phenomenon.", author: "Hans-Hermann Hoppe" },
-      
-      // Javier Milei (10 citas)
-      { text: "The State is not the solution to the problem, the State is the problem.", author: "Javier Milei" },
-      { text: "You cannot give poor people property by destroying rich people's property.", author: "Javier Milei" },
-      { text: "Socialism is always and everywhere an economic phenomenon that impoverishes.", author: "Javier Milei" },
-      { text: "Long live freedom, damn it!", author: "Javier Milei" },
-      { text: "The market is the most efficient mechanism for resource allocation that has ever existed.", author: "Javier Milei" },
-      { text: "Politicians are not philanthropists, they are merchants of privileges.", author: "Javier Milei" },
-      { text: "Inflation is always and everywhere a monetary phenomenon.", author: "Javier Milei" },
-      { text: "The caste always lives at the expense of those who work and pay taxes.", author: "Javier Milei" },
-      { text: "Economic freedom is the basis of all other freedoms.", author: "Javier Milei" },
-      { text: "Social justice is an aberration that violates individual rights.", author: "Javier Milei" },
-      
-      // Robert Nozick (10 citas)
-      { text: "Taxation of earnings from labor is on a par with forced labor.", author: "Robert Nozick" },
-      { text: "Individuals have rights, and there are things no person or group may do to them.", author: "Robert Nozick" },
-      { text: "There is no social entity with a good that undergoes some sacrifice for its own good.", author: "Robert Nozick" },
-      { text: "The minimal state is the most extensive state that can be justified.", author: "Robert Nozick" },
-      { text: "From each according to what he chooses to do, to each according to what he makes for himself.", author: "Robert Nozick" },
-      { text: "Liberty upsets patterns.", author: "Robert Nozick" },
-      { text: "The state may not use its coercive apparatus for the purpose of getting some citizens to aid others.", author: "Robert Nozick" },
-      { text: "Life plans give meaning to existence.", author: "Robert Nozick" },
-      { text: "What happens to people and what they are entitled to depends on their choices and actions.", author: "Robert Nozick" },
-      { text: "The fundamental question of political philosophy is whether there should be any state at all.", author: "Robert Nozick" },
-      
-      // Ron Paul (10 citas)
-      { text: "Deficit spending: raise taxes, print money, or borrow.", author: "Ron Paul" },
-      { text: "Truth is treason in the empire of lies.", author: "Ron Paul" },
-      { text: "The moral and constitutional obligations of our representatives is to protect our liberty, not coddle the world.", author: "Ron Paul" },
-      { text: "When the people fear their government, there is tyranny; when the government fears the people, there is liberty.", author: "Ron Paul" },
-      { text: "Setting a good example is a far better way to spread ideals than through force of arms.", author: "Ron Paul" },
-      { text: "Free Americans take personal responsibility for decisions.", author: "Ron Paul" },
-      { text: "Real patriotism is a willingness to challenge the government when it's wrong.", author: "Ron Paul" },
-      { text: "The government shouldn't be in the business of protecting us from ourselves.", author: "Ron Paul" },
-      { text: "Just think of what Woodrow Wilson stood for: he was the man who rammed through the income tax.", author: "Ron Paul" },
-      { text: "There is only one kind of freedom and that's individual freedom.", author: "Ron Paul" },
-      
-      // Frederic Bastiat (10 citas)
-      { text: "State: fictitious entity for living at others' expense.", author: "Frederic Bastiat" },
-      { text: "Legal plunder can be committed in an infinite number of ways.", author: "Frederic Bastiat" },
-      { text: "Good causes suffer more from inept defense than attacks.", author: "Frederic Bastiat" },
-      { text: "Government is the great fiction through which everybody endeavors to live at the expense of everybody else.", author: "Frederic Bastiat" },
-      { text: "Law versus morality forces cruel citizen choices.", author: "Frederic Bastiat" },
-      { text: "Life, liberty, and property do not exist because men have made laws.", author: "Frederic Bastiat" },
-      { text: "Sometimes the law defends plunder and participates in it.", author: "Frederic Bastiat" },
-      { text: "The law has been used to destroy its own objective.", author: "Frederic Bastiat" },
-      { text: "Each of us has a natural right to defend his person, his liberty, and his property.", author: "Frederic Bastiat" },
-      { text: "Plunder groups create legal systems authorizing theft.", author: "Frederic Bastiat" },
-      
-      // Anxo Bastos (10 citas)
-      { text: "The state is not a necessary evil, it is simply an evil.", author: "Anxo Bastos" },
-      { text: "Democracy is the dictatorship of the majority over the minority.", author: "Anxo Bastos" },
-      { text: "Every regulation is a restriction on human freedom.", author: "Anxo Bastos" },
-      { text: "The market is the most democratic institution that exists.", author: "Anxo Bastos" },
-      { text: "Politicians do not create wealth, they only redistribute it.", author: "Anxo Bastos" },
-      { text: "The welfare state is the road to economic serfdom.", author: "Anxo Bastos" },
-      { text: "Property rights are the foundation of all other rights.", author: "Anxo Bastos" },
-      { text: "Competition is the engine of human progress.", author: "Anxo Bastos" },
-      { text: "The entrepreneur is the true hero of economic progress.", author: "Anxo Bastos" },
-      { text: "Freedom is not negotiable.", author: "Anxo Bastos" },
-      
-      // Juan Ramón Rallo (10 citas)
-      { text: "The market is not perfect, but it is the best system we have for coordinating human action.", author: "Juan Ramón Rallo" },
-      { text: "Central banking is the source of most economic crises.", author: "Juan Ramón Rallo" },
-      { text: "Economic calculation is impossible without private property and free prices.", author: "Juan Ramón Rallo" },
-      { text: "The welfare state creates more problems than it solves.", author: "Juan Ramón Rallo" },
-      { text: "Entrepreneurship is the driving force of economic development.", author: "Juan Ramón Rallo" },
-      { text: "Competition benefits consumers, not competitors.", author: "Juan Ramón Rallo" },
-      { text: "The price system is the most efficient information transmission mechanism ever discovered.", author: "Juan Ramón Rallo" },
-      { text: "Economic freedom and political freedom are inseparable.", author: "Juan Ramón Rallo" },
-      { text: "Minimum wage laws harm the very people they claim to help.", author: "Juan Ramón Rallo" },
-      { text: "Sound money is the foundation of a prosperous society.", author: "Juan Ramón Rallo" },
-      
-      // Jesús Huerta de Soto (10 citas)
-      { text: "Socialism is intellectually impossible because it lacks the institutional framework necessary for economic calculation.", author: "Jesús Huerta de Soto" },
-      { text: "The Austrian school methodology is the only truly scientific approach to economics.", author: "Jesús Huerta de Soto" },
-      { text: "Central banking is a violation of free market principles.", author: "Jesús Huerta de Soto" },
-      { text: "Entrepreneurship is the essential function that drives the market process.", author: "Jesús Huerta de Soto" },
-      { text: "The theory of dynamic efficiency is superior to static equilibrium models.", author: "Jesús Huerta de Soto" },
-      { text: "Private property rights are the foundation of civilization.", author: "Jesús Huerta de Soto" },
-      { text: "The market is a process of discovery, not a state of equilibrium.", author: "Jesús Huerta de Soto" },
-      { text: "Social security systems are unsustainable Ponzi schemes.", author: "Jesús Huerta de Soto" },
-      { text: "Economic cycles are caused by credit expansion by central banks.", author: "Jesús Huerta de Soto" },
-      { text: "The free market is the only system compatible with human nature and dignity.", author: "Jesús Huerta de Soto" }
-    ];
-    
-    const libertarianQuotesSpanish = [
-      // Ludwig von Mises (10 citas)
-      { text: "El capitalismo sirve a las masas mediante la producción masiva.", author: "Ludwig von Mises" },
-      { text: "Las políticas intervencionistas del gobierno empeoran la situación, no la mejoran.", author: "Ludwig von Mises" },
-      { text: "El Socialismo rechaza cualquier sistema donde los seres humanos vivan libres.", author: "Ludwig von Mises" },
-      { text: "Los empresarios obtienen ganancias sirviendo eficazmente a los consumidores.", author: "Ludwig von Mises" },
-      { text: "La paz y no la guerra es el padre de todas las cosas.", author: "Ludwig von Mises" },
-      { text: "La economía estudia la acción humana, no los objetos materiales.", author: "Ludwig von Mises" },
-      { text: "Los mercados son democráticos: cada centavo cuenta como un voto.", author: "Ludwig von Mises" },
-      { text: "La sociedad nace de la paz, no del conflicto.", author: "Ludwig von Mises" },
-      { text: "La acción humana es un comportamiento con un propósito definido.", author: "Ludwig von Mises" },
-      
-      // Friedrich Hayek (10 citas)
-      { text: "La economía demuestra qué poco sabemos sobre diseñar sociedades.", author: "Friedrich Hayek" },
-      { text: "El camino al infierno está pavimentado de buenas intenciones.", author: "Friedrich Hayek" },
-      { text: "La libertad individual depende de reconocer nuestra ignorancia universal.", author: "Friedrich Hayek" },
-      { text: "La competencia es un procedimiento de descubrimiento.", author: "Friedrich Hayek" },
-      { text: "Cuanto más 'planifica' el estado, más difícil se vuelve la planificación para el individuo.", author: "Friedrich Hayek" },
-      { text: "La planificación lleva a la dictadura como instrumento más efectivo de coerción.", author: "Friedrich Hayek" },
-      { text: "La libertad es una oportunidad para hacer tanto el bien como el mal.", author: "Friedrich Hayek" },
-      { text: "Nada es más destructivo para la responsabilidad individual que el moderno estado de bienestar.", author: "Friedrich Hayek" },
-      { text: "Grupos con creencias incorrectas simplemente desaparecen.", author: "Friedrich Hayek" },
-      
-      // Murray Rothbard (10 citas)
-      { text: "El Estado es una banda de ladrones a gran escala.", author: "Murray Rothbard" },
-      { text: "Nadie puede amenazar con invadir, robar, secuestrar o asesinar por buenas razones.", author: "Murray Rothbard" },
-      { text: "El estado es la gran ficción para vivir a costa de otros.", author: "Murray Rothbard" },
-      { text: "El libertarianismo es la idea radical de que otras personas no son tu propiedad.", author: "Murray Rothbard" },
-      { text: "La tendencia natural del estado es la inflación.", author: "Murray Rothbard" },
-      { text: "Todas las guerras del gobierno son injustas.", author: "Murray Rothbard" },
-      { text: "El estado permite crimen a escalas masivas.", author: "Murray Rothbard" },
-      { text: "Es fácil ser conspicuamente 'compasivo' si otros están siendo forzados a pagar el costo.", author: "Murray Rothbard" },
-      { text: "Los impuestos son robo, pura y simplemente aunque sea robo a gran y colosal escala.", author: "Murray Rothbard" },
-      { text: "El estado prospera en guerra salvo si es derrotado.", author: "Murray Rothbard" },
-      
-      // Javier Milei (10 citas) - Ya están en español, las mantengo igual
-      { text: "El Estado no es la solución al problema, el Estado es el problema.", author: "Javier Milei" },
-      { text: "No se puede dar propiedad a los pobres destruyendo la propiedad de los ricos.", author: "Javier Milei" },
-      { text: "Socialismo siempre empobrece económicamente.", author: "Javier Milei" },
-      { text: "¡Viva la libertad, carajo!", author: "Javier Milei" },
-      { text: "El mercado es el mecanismo más eficiente de asignación.", author: "Javier Milei" },
-      { text: "Los políticos no son filántropos, son mercaderes de privilegios.", author: "Javier Milei" },
-      { text: "La inflación es siempre y en todas partes un fenómeno monetario.", author: "Javier Milei" },
-      { text: "La casta siempre vive a costa de los que trabajan y pagan impuestos.", author: "Javier Milei" },
-      { text: "La libertad económica es la base de todas las demás libertades.", author: "Javier Milei" },
-      { text: "La justicia social es una aberración que viola los derechos individuales.", author: "Javier Milei" },
-      
-    ];
-    
-    // Select array based on system language
-    const libertarianQuotes = IS_SPANISH ? libertarianQuotesSpanish : libertarianQuotesEnglish;
+    <div class="quote-container" id="quoteContainer">
+        <div id="quoteText"></div>
+        <div class="author-text" id="authorText"></div>
+    </div>
 
-    let lastQuote = null;
-    let quoteVisible = false;
-    let autoTimeout = null;
-    
-    function pad(n) {
-      return n.toString().padStart(2, '0');
-    }
 
-          // Function for typewriter effect (defined globally)
-    function typeWriter(element, text, speed = 50, onComplete = null) {
-              console.log('Starting typewriter effect:', text);
-      element.innerHTML = '';
-      let i = 0;
-      
-      function type() {
-        if (i < text.length) {
-          element.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(type, speed);
-        } else {
-          console.log('Typewriter effect completed');
-          if (onComplete) onComplete();
+
+    <script>
+        // Configuration constants
+        const AUTO_TIMEOUT = 40000; // 40 seconds
+        const TEXT_SPEED = 50; // milliseconds per character
+        const SYSTEM_LANGUAGE = navigator.language || 'en';
+        const IS_SPANISH = SYSTEM_LANGUAGE.startsWith('es');
+
+        // Libertarian quotes collection
+        const libertarianQuotesEnglish = [
+            // Murray Rothbard (5 citas)
+            { text: "No one can threaten violence for good reasons.", author: "Murray Rothbard" },
+            { text: "The state: fiction for living at others' expense.", author: "Murray Rothbard" },
+            { text: "Libertarianism is the radical idea that other people are not your property.", author: "Murray Rothbard" },
+            { text: "The natural tendency of the state is inflation.", author: "Murray Rothbard" },
+            { text: "All government wars are unjust.", author: "Murray Rothbard" },
+            
+            // Ayn Rand (5 citas)
+            { text: "Government protects from criminals; Constitution protects from government.", author: "Ayn Rand" },
+            { text: "Individual rights aren't subject to majority votes.", author: "Ayn Rand" },
+            { text: "The smallest minority on earth is the individual.", author: "Ayn Rand" },
+            { text: "Government: most dangerous threat with legal force monopoly.", author: "Ayn Rand" },
+            { text: "Government's purpose: protect individual rights only.", author: "Ayn Rand" },
+            
+            // Milton Friedman (5 citas)
+            { text: "Freedom before equality leads to both.", author: "Milton Friedman" },
+            { text: "Nothing is so permanent as a temporary government program.", author: "Milton Friedman" },
+            { text: "The government solution to a problem is usually as bad as the problem.", author: "Milton Friedman" },
+            { text: "Government in Sahara: sand shortage guaranteed.", author: "Milton Friedman" },
+            { text: "The free market enables voluntary cooperation.", author: "Milton Friedman" },
+            
+            // Javier Milei (5 citas)
+            { text: "The State is not the solution to the problem, the State is the problem.", author: "Javier Milei" },
+            { text: "You cannot give poor people property by destroying rich people's property.", author: "Javier Milei" },
+            { text: "Socialism is always and everywhere an economic phenomenon that impoverishes.", author: "Javier Milei" },
+            { text: "Long live freedom, damn it!", author: "Javier Milei" },
+            { text: "The market is the most efficient mechanism for resource allocation that has ever existed.", author: "Javier Milei" },
+            
+            // Ron Paul (5 citas)
+            { text: "Deficit spending: raise taxes, print money, or borrow.", author: "Ron Paul" },
+            { text: "Truth is treason in the empire of lies.", author: "Ron Paul" },
+            { text: "When the people fear their government, there is tyranny; when the government fears the people, there is liberty.", author: "Ron Paul" },
+            { text: "Setting a good example is a far better way to spread ideals than through force of arms.", author: "Ron Paul" },
+            { text: "Real patriotism is a willingness to challenge the government when it's wrong.", author: "Ron Paul" }
+        ];
+
+        const libertarianQuotesSpanish = [
+            // Murray Rothbard (5 citas)
+            { text: "Nadie puede amenazar con violencia por buenas razones.", author: "Murray Rothbard" },
+            { text: "El estado: ficción para vivir a expensas de otros.", author: "Murray Rothbard" },
+            { text: "El libertarismo es la idea radical de que otras personas no son tu propiedad.", author: "Murray Rothbard" },
+            { text: "La tendencia natural del estado es la inflación.", author: "Murray Rothbard" },
+            { text: "Todas las guerras gubernamentales son injustas.", author: "Murray Rothbard" },
+            
+            // Ayn Rand (5 citas)
+            { text: "El gobierno protege de los criminales; la Constitución protege del gobierno.", author: "Ayn Rand" },
+            { text: "Los derechos individuales no están sujetos a votos mayoritarios.", author: "Ayn Rand" },
+            { text: "La minoría más pequeña en la tierra es el individuo.", author: "Ayn Rand" },
+            { text: "Gobierno: amenaza más peligrosa con monopolio de fuerza legal.", author: "Ayn Rand" },
+            { text: "El propósito del gobierno: proteger solo los derechos individuales.", author: "Ayn Rand" },
+            
+            // Milton Friedman (5 citas)
+            { text: "La libertad antes que la igualdad conduce a ambas.", author: "Milton Friedman" },
+            { text: "Nada es tan permanente como un programa gubernamental temporal.", author: "Milton Friedman" },
+            { text: "La solución gubernamental a un problema suele ser tan mala como el problema.", author: "Milton Friedman" },
+            { text: "Gobierno en el Sahara: escasez de arena garantizada.", author: "Milton Friedman" },
+            { text: "El mercado libre permite la cooperación voluntaria.", author: "Milton Friedman" },
+            
+            // Javier Milei (5 citas)
+            { text: "El Estado no es la solución al problema, el Estado es el problema.", author: "Javier Milei" },
+            { text: "No puedes dar propiedad a los pobres destruyendo la propiedad de los ricos.", author: "Javier Milei" },
+            { text: "El socialismo es siempre y en todas partes un fenómeno económico que empobrece.", author: "Javier Milei" },
+            { text: "¡Viva la libertad, carajo!", author: "Javier Milei" },
+            { text: "El mercado es el mecanismo más eficiente para la asignación de recursos que jamás haya existido.", author: "Javier Milei" },
+            
+            // Ron Paul (5 citas)
+            { text: "Gasto deficitario: subir impuestos, imprimir dinero o pedir prestado.", author: "Ron Paul" },
+            { text: "La verdad es traición en el imperio de las mentiras.", author: "Ron Paul" },
+            { text: "Cuando el pueblo teme a su gobierno, hay tiranía; cuando el gobierno teme al pueblo, hay libertad.", author: "Ron Paul" },
+            { text: "Dar un buen ejemplo es una forma mucho mejor de difundir ideales que a través de la fuerza de las armas.", author: "Ron Paul" },
+            { text: "El verdadero patriotismo es la voluntad de desafiar al gobierno cuando está equivocado.", author: "Ron Paul" }
+        ];
+
+        // Global variables
+        let lastQuote = -1;
+        let quoteVisible = false;
+        let autoTimeout;
+        let currentQuoteIndex = 0;
+
+        // DOM elements
+        const quoteElement = document.getElementById('quoteContainer');
+        const textElement = document.getElementById('quoteText');
+        const authorElement = document.getElementById('authorText');
+
+        // Typewriter function
+        function typeWriter(text, element, onComplete) {
+            element.innerHTML = '';
+            let i = 0;
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, TEXT_SPEED);
+                } else {
+                    if (onComplete) onComplete();
+                }
+            }
+            
+            type();
         }
-      }
-      
-      type();
-    }
 
-    function showRandomQuote() {
-      console.log('Attempting to show quote...');
-      
-      // Cancel previous timeout if exists
-      if (autoTimeout) {
-        clearTimeout(autoTimeout);
-        autoTimeout = null;
-      }
-      
-      let selectedQuote;
-      do {
-        selectedQuote = libertarianQuotes[Math.floor(Math.random() * libertarianQuotes.length)];
-      } while (selectedQuote === lastQuote && libertarianQuotes.length > 1);
-      
-      lastQuote = selectedQuote;
-      console.log('Selected quote:', selectedQuote);
-      
-      const quoteElement = document.getElementById('quoteContainer');
-      const textElement = document.getElementById('quoteText');
-      const authorElement = document.getElementById('authorText');
-      const logoElement = document.getElementById('logoGuardiaNocturna');
+        // Show random quote
+        function showRandomQuote() {
+            const quotes = IS_SPANISH ? libertarianQuotesSpanish : libertarianQuotesEnglish;
+            let randomIndex;
+            
+            do {
+                randomIndex = Math.floor(Math.random() * quotes.length);
+            } while (randomIndex === lastQuote && quotes.length > 1);
+            
+            lastQuote = randomIndex;
+            const quote = quotes[randomIndex];
+            
+            // Show quote with typewriter effect
+            typeWriter(quote.text, textElement, () => {
+                // Show author after quote is complete
+                setTimeout(() => {
+                    authorElement.textContent = quote.author;
+                    authorElement.style.opacity = '1';
+                }, 500);
+            });
+            
+            // Set timeout for next quote
+            autoTimeout = setTimeout(showRandomQuote, AUTO_TIMEOUT);
+        }
 
-      console.log('Showing quote:', selectedQuote.text);
-      
-              // Helper function to show quote
-        const showQuote = () => {
-          quoteElement.classList.add('visible');
-          authorElement.classList.add('visible');
-          
-          // Typewriter effect for main text
-          typeWriter(textElement, selectedQuote.text, TEXT_SPEED, function() {
-            // When quote ends, show author
-            setTimeout(() => {
-              typeWriter(authorElement, "— " + selectedQuote.author, AUTHOR_SPEED);
-            }, AUTHOR_DELAY);
-          });
-          
-          quoteVisible = true;
-          console.log(`${quoteVisible ? 'New' : 'First'} quote with typewriter effect`);
-          
-          // Schedule next automatic change
-          autoTimeout = setTimeout(showRandomQuote, AUTO_TIMEOUT);
-        };
-        
-        // Fade out current quote
-        quoteElement.classList.remove('visible');
-        authorElement.classList.remove('visible');
-        
-        // Show new quote after transition
-        setTimeout(showQuote, TRANSITION_DELAY);
-    }
+        // Manual quote change
+        function changeQuote() {
+            if (autoTimeout) {
+                clearTimeout(autoTimeout);
+            }
+            authorElement.style.opacity = '0';
+            showRandomQuote();
+        }
 
-    function update() {
-      const s = new Date().getSeconds();
-      
-      // Show quote every 42 seconds (40 seconds visible + 2 seconds for transition)
-      if ((s % 42 === 0) && !quoteVisible) {
-        setTimeout(showRandomQuote, TRANSITION_DELAY);
-      }
-    }
+        // Event listeners
+        document.addEventListener('keydown', (e) => {
+            if (e.key === ' ' || e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                changeQuote();
+            }
+        });
 
-    setInterval(update, 1000);
-    update();
-    
+        document.addEventListener('click', changeQuote);
 
-    
-    // Show first quote after 2 seconds
-    setTimeout(showRandomQuote, 2000);
-    
-    // Add listener for manual quote change
-    document.addEventListener('keydown', function(event) {
-      // Prevent certain keys from exiting the screensaver
-      if (event.key === ' ' || event.key === 'ArrowRight' || event.key === 'ArrowLeft' || event.key === 'Enter') {
-        event.preventDefault();
-        event.stopPropagation();
-        
-        console.log('Key pressed:', event.key, '- Changing quote manually');
-        
-        // Force quote change immediately
+        // Initialize
         showRandomQuote();
-        
-        return false;
-      }
-      
-      // For other keys, allow normal behavior (exit screensaver)
-    });
-    
-    // Also add listener for clicks (optional)
-    document.addEventListener('click', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-              console.log('Click detected - Changing quote manually');
-        showRandomQuote();
-      return false;
-    });
-  </script>
+
+        // Console message
+        console.log('ANCAP Screensaver - Libertarian Screensaver with 25 quotes');
+        console.log('Open source project for the libertarian community');
+    </script>
 </body>
 </html>

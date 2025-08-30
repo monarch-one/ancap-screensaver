@@ -3,17 +3,17 @@
 [![GitHub stars](https://img.shields.io/github/stars/monarch-one/ancap-screensaver?style=social)](https://github.com/monarch-one/ancap-screensaver)
 [![GitHub forks](https://img.shields.io/github/forks/monarch-one/ancap-screensaver?style=social)](https://github.com/monarch-one/ancap-screensaver)
 [![GitHub license](https://img.shields.io/github/license/monarch-one/ancap-screensaver)](https://github.com/monarch-one/ancap-screensaver/blob/main/LICENSE)
-[![Price](https://img.shields.io/badge/Price-$4.99-brightgreen)](https://gumroad.com/ancap-screensaver)
-[![Demo](https://img.shields.io/badge/Demo-Free-blue)](https://github.com/monarch-one/ancap-screensaver#readme)
+[![Price](https://img.shields.io/badge/Price-Free-brightgreen)](https://github.com/monarch-one/ancap-screensaver)
+[![Version](https://img.shields.io/badge/Version-Full-blue)](https://github.com/monarch-one/ancap-screensaver#readme)
 
-Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcocapitalistas con un diseño moderno y tipografía profesional.
+Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcocapitalistas con un diseño moderno y tipografía profesional. **Completamente gratuito y de código abierto para la comunidad libertaria.**
 
-> **🆓 [DEMO GRATUITO](https://github.com/monarch-one/ancap-screensaver#readme) | 💎 [VERSIÓN COMPLETA $4.99](https://gumroad.com/ancap-screensaver)**
+> **🆓 [COMPLETAMENTE GRATUITO](https://github.com/monarch-one/ancap-screensaver#readme) | 💻 [CÓDIGO ABIERTO](https://github.com/monarch-one/ancap-screensaver)**
 
 ## ✨ Características
 
 - **Logo prominente**: Logo "GUARDIA NOCTURNA • LIBERTAS • IN TENEBRIS" en la parte superior
-- **Citas libertarias**: Colección de frases de pensadores como Ludwig von Mises, Friedrich Hayek, Murray Rothbard, Hans-Hermann Hoppe y Javier Milei
+- **Citas libertarias**: 25 citas auténticas de pensadores como Murray Rothbard, Ayn Rand, Milton Friedman, Javier Milei y Ron Paul
 - **Efecto máquina de escribir**: Las citas aparecen letra por letra para una experiencia envolvente
 - **Autor secuencial**: El nombre del autor aparece después de que termine la cita
 - **Tipografía profesional**: JetBrains Mono para una apariencia técnica y moderna
@@ -21,6 +21,8 @@ Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcoc
 - **Cambio automático**: Las citas cambian cada 40 segundos
 - **Idioma automático**: Detecta el idioma del sistema y muestra las citas en español o inglés
 - **Navegación manual**: Usa las flechas del teclado o la barra espaciadora para cambiar frases manualmente
+- **Instalación nativa**: Instalador .pkg nativo de macOS incluido
+- **Completamente gratuito**: Sin limitaciones ni indicadores de venta
 
 ## 🎨 Diseño Visual
 
@@ -85,11 +87,11 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 ## 🎯 Citas Incluidas
 
 ### Pensadores destacados:
-- **Ludwig von Mises** - Economía austriaca
-- **Friedrich Hayek** - Teoría del orden espontáneo
-- **Murray Rothbard** - Anarcocapitalismo
-- **Hans-Hermann Hoppe** - Argumentación ética
-- **Javier Milei** - Libertarianismo moderno
+- **Murray Rothbard** - Libertarianismo puro (5 citas)
+- **Ayn Rand** - Objetivismo y derechos individuales (5 citas)
+- **Milton Friedman** - Economía de libre mercado (5 citas)
+- **Javier Milei** - Libertarianismo argentino (5 citas)
+- **Ron Paul** - Libertarianismo político (5 citas)
 
 ### Temas cubiertos:
 - Propiedad privada y derechos individuales
@@ -108,36 +110,46 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 
 ## 💰 **Monetización & Soporte**
 
-> **🆓 DEMO GRATUITO | 💎 VERSIÓN COMPLETA $4.99**
+> **🆓 COMPLETAMENTE GRATUITO | 💻 CÓDIGO ABIERTO**
 
-### 🆓 **Versión Gratuita (Demo)**
-- 25 citas libertarias (muestra del producto)
+### 🆓 **Versión Gratuita (Completa)**
+- 25 citas libertarias auténticas
 - Efecto máquina de escribir completo
 - Soporte para múltiples idiomas
-- Experiencia limpia sin limitaciones técnicas
+- Experiencia limpia sin limitaciones
+- **COMPLETAMENTE GRATUITO**
 
-### 💎 **Versión Completa** ($4.99 - Un solo pago)
-- 100+ citas libertarias completas
-- Opciones de personalización avanzadas
-- Actualizaciones de por vida
-- Soporte técnico completo
+### 🌟 **¿Por qué es gratuito?**
+- **Educación libertaria** - Accesible para todos
+- **Código abierto** - Contribución a la comunidad
+- **Difusión de ideas** - Libertad sin barreras económicas
+- **Herramienta educativa** - Para estudiantes y activistas
+- **Sin limitaciones** - Experiencia completa gratuita
+- **Comunidad** - Crecimiento orgánico del movimiento
 
-### 🌟 **¿Por qué pagar $4.99?**
-- **Calidad profesional** - Estándares Silicon Valley
-- **Actualizaciones de por vida** - Nuevas citas y funciones
-- **Contenido exclusivo** - Sabiduría libertaria única
-- **Soporte técnico** - Ayuda cuando la necesites
-- **Pago único** - Sin suscripciones ni cargos recurrentes
-- **Prueba gratuita** - 25 citas gratis sin limitaciones
-
-**[💰 Ver planes completos →](PRICING.md)** | **[💎 Comprar versión completa →](https://gumroad.com/ancap-screensaver)**
+**💻 [Ver código fuente →](https://github.com/monarch-one/ancap-screensaver)** | **⭐ [Dar estrella en GitHub →](https://github.com/monarch-one/ancap-screensaver)**
 
 ## 📱 Compatibilidad
 
-- **Sistema**: macOS 10.12+
+- **Sistema**: macOS 10.14+ (con instalador nativo)
 - **Navegadores**: Chrome, Safari, Firefox, Edge (para desarrollo)
 - **Resoluciones**: Todas las resoluciones de pantalla
 - **Idiomas**: Español e inglés (detección automática)
+- **Instalación**: Instalador .pkg nativo de macOS incluido
+
+## 🚀 Descarga Rápida
+
+### 📦 Instaladores disponibles:
+
+- **🍎 macOS**: [ANCAP-Screensaver-macOS-v1.1.0.pkg](installers/output/ANCAP-Screensaver-macOS-v1.1.0.pkg) - Instalador nativo
+- **💻 Código fuente**: [ANCAP-Screensaver-v1.1.0.zip](ANCAP-Screensaver-v1.1.0.zip) - Proyecto completo
+- **📱 Instalador macOS**: [ANCAP-Screensaver-macOS-v1.1.0.zip](ANCAP-Screensaver-macOS-v1.1.0.zip) - ZIP del instalador
+
+### 🔧 Instalación en macOS:
+1. Descarga el instalador `.pkg`
+2. Doble-click para instalar
+3. Ve a Preferencias del Sistema > Escritorio y Protector de Pantalla
+4. Selecciona 'ANCAP' de la lista
 
 ## 🤝 Contribuciones
 

@@ -2,35 +2,100 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleDevelopmentRegion</key>
-    <string>en</string>
-    <key>CFBundleExecutable</key>
-    <string>ANCAP</string>
-    <key>CFBundleIdentifier</key>
-    <string>com.ancap.screensaver</string>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>6.0</string>
-    <key>CFBundleName</key>
-    <string>ANCAP</string>
-    <key>CFBundlePackageType</key>
-    <string>BNDL</string>
-    <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
-    <key>CFBundleVersion</key>
-    <string>1</string>
-    <key>CFBundleDisplayName</key>
-    <string>ANCAP</string>
-    <key>CFBundleGetInfoString</key>
-    <string>ANCAP Screensaver 1.0, Copyright © 2025. Anarcho-capitalist themed screensaver with digital clock.</string>
-    <key>NSHumanReadableCopyright</key>
-    <string>Copyright © 2025. Open source project available at https://github.com/monarch-one/monarch</string>
-    <key>CFBundleDocumentationURL</key>
-    <string>https://github.com/monarch-one/monarch</string>
-    <key>NSPrincipalClass</key>
-    <string>ANCAPScreensaverView</string>
-    <key>ScreenSaverPreviewImage</key>
-    <string>preview.png</string>
-    <key>CFBundleIconFile</key>
-    <string>preview.png</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>ANCAP</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ancap.screensaver</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>ANCAP Screensaver</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2024 ANCAP Screensaver Team. All rights reserved.</string>
+	<key>NSPrincipalClass</key>
+	<string>ANCAPView</string>
+	<key>CFBundleDisplayName</key>
+	<string>ANCAP Screensaver</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Professional libertarian quotes screensaver with cross-platform support</string>
+	<key>CFBundleLongVersionString</key>
+	<string>1.0.0 (Build 20240830)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.12</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSRequiresAquaSystemAppearance</key>
+	<false/>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>ANCAP Screensaver</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>saver</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>icon.icns</string>
+		</dict>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>ANCAP Screensaver URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ancap-screensaver</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>LSApplicationMinimumSystemVersion</key>
+	<string>10.12</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>es</string>
+	</array>
+	<key>CFBundleLocalizedInfoDictionary</key>
+	<dict>
+		<key>en</key>
+		<dict>
+			<key>CFBundleDisplayName</key>
+			<string>ANCAP Screensaver</string>
+			<key>CFBundleGetInfoString</key>
+			<string>Professional libertarian quotes screensaver with cross-platform support</string>
+		</dict>
+		<key>es</key>
+		<dict>
+			<key>CFBundleDisplayName</key>
+			<string>Salvapantallas ANCAP</string>
+			<key>CFBundleGetInfoString</key>
+			<string>Salvapantallas profesional de citas libertarias con soporte multiplataforma</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
