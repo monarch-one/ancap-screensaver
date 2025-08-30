@@ -96,7 +96,37 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 - **CSS3** - Estilos y animaciones
 - **JavaScript ES6+** - Lógica y efectos
 - **Google Fonts** - JetBrains Mono
-- **macOS Screensaver** - Sistema de salvapantallas nativo
+- **Cross-platform** - macOS, Windows, Linux support
+
+## 💰 **Monetización & Soporte**
+
+### 🆓 **Versión Gratuita**
+- 50+ citas libertarias
+- Efecto máquina de escribir básico
+- Soporte para múltiples idiomas
+- Código abierto completo
+
+### 💎 **Versión Premium** ($5/mes)
+- 100+ citas premium exclusivas
+- Opciones de personalización avanzadas
+- Soporte prioritario
+- Acceso temprano a nuevas funciones
+
+### 🚀 **Versión Enterprise** ($29.99/mes)
+- Citas personalizadas ilimitadas
+- Branding personalizado
+- Acceso a API
+- Soporte 24/7
+
+### 🌟 **¿Por qué pagar?**
+- **Calidad profesional** - Estándares Silicon Valley
+- **Actualizaciones regulares** - Nuevas citas mensuales
+- **Contenido exclusivo** - Sabiduría libertaria única
+- **Soporte técnico** - Ayuda cuando la necesites
+- **Comunidad** - Conecta con libertarios
+
+**[Ver planes completos →](PRICING.md)**
+**[Soporte en GitHub →](https://github.com/sponsors/ancap-screensaver)**
 
 ## 📱 Compatibilidad
 

@@ -1,0 +1,75 @@
+# GitHub Marketplace Configuration
+# This file configures your app for the GitHub Marketplace
+
+name: "ANCAP Screensaver"
+description: "Professional libertarian quotes screensaver with cross-platform support"
+pricing_plan: "Free"
+category: "Developer Tools"
+publisher: "ancap-screensaver"
+repository: "ancap-screensaver/ancap-screensaver"
+homepage_url: "https://github.com/ancap-screensaver/ancap-screensaver"
+support_url: "https://github.com/ancap-screensaver/ancap-screensaver/issues"
+documentation_url: "https://github.com/ancap-screensaver/ancap-screensaver#readme"
+
+# Pricing plans
+pricing_plans:
+  - name: "Free"
+    description: "Basic screensaver with 50+ quotes"
+    price: 0
+    unit: "month"
+    features:
+      - "50+ libertarian quotes"
+      - "Basic typewriter effect"
+      - "Cross-platform support"
+      - "Open source code"
+
+  - name: "Premium"
+    description: "Advanced features with 100+ premium quotes"
+    price: 5
+    unit: "month"
+    features:
+      - "100+ premium quotes"
+      - "Advanced customization"
+      - "Priority support"
+      - "Early access to features"
+
+  - name: "Enterprise"
+    description: "Full customization for businesses and organizations"
+    price: 29.99
+    unit: "month"
+    features:
+      - "Unlimited custom quotes"
+      - "White-label branding"
+      - "API access"
+      - "24/7 priority support"
+
+# App permissions
+permissions:
+  contents: "read"
+  metadata: "read"
+
+# Webhook events
+webhook_events:
+  - "installation"
+  - "installation_repositories"
+  - "marketplace_purchase"
+
+# Installation options
+installation_options:
+  repository_selection: "selected"
+  single_file_name: ""
+
+# Marketplace listing
+marketplace_listing:
+  featured: true
+  verified: false
+  category: "Developer Tools"
+  tags:
+    - "screensaver"
+    - "libertarian"
+    - "quotes"
+    - "cross-platform"
+    - "productivity"
+    - "philosophy"
+    - "economics"
+    - "austrian-school"
