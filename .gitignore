@@ -75,3 +75,20 @@ build/
 # Temporary files
 *.tmp
 *.temp
+
+# Screensaver specific
+*.saver
+!ANCAP.saver/
+
+# Development files
+Content/
+web-version/
+installers/
+*.zip
+*.sh
+*.bat
+*.m
+*.txt
+convert-*.html
+reloj-*.html
+LOGO-*.md
