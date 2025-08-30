@@ -1,6 +1,14 @@
 # ANCAP Screensaver
 
+[![GitHub stars](https://img.shields.io/github/stars/monarch-one/ancap-screensaver?style=social)](https://github.com/monarch-one/ancap-screensaver)
+[![GitHub forks](https://img.shields.io/github/forks/monarch-one/ancap-screensaver?style=social)](https://github.com/monarch-one/ancap-screensaver)
+[![GitHub license](https://img.shields.io/github/license/monarch-one/ancap-screensaver)](https://github.com/monarch-one/ancap-screensaver/blob/main/LICENSE)
+[![Price](https://img.shields.io/badge/Price-$4.99-brightgreen)](https://gumroad.com/ancap-screensaver)
+[![Demo](https://img.shields.io/badge/Demo-Free-blue)](https://github.com/monarch-one/ancap-screensaver#readme)
+
 Un salvapantallas elegante y minimalista que muestra citas libertarias y anarcocapitalistas con un diseño moderno y tipografía profesional.
+
+> **🆓 [DEMO GRATUITO](https://github.com/monarch-one/ancap-screensaver#readme) | 💎 [VERSIÓN COMPLETA $4.99](https://gumroad.com/ancap-screensaver)**
 
 ## ✨ Características
 
@@ -100,6 +108,8 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 
 ## 💰 **Monetización & Soporte**
 
+> **🆓 DEMO GRATUITO | 💎 VERSIÓN COMPLETA $4.99**
+
 ### 🆓 **Versión Gratuita (Demo)**
 - 25 citas libertarias (muestra del producto)
 - Efecto máquina de escribir completo
@@ -120,8 +130,7 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 - **Pago único** - Sin suscripciones ni cargos recurrentes
 - **Prueba gratuita** - 25 citas gratis sin limitaciones
 
-**[Ver planes completos →](PRICING.md)**
-**[Comprar versión completa →](https://gumroad.com/ancap-screensaver)**
+**[💰 Ver planes completos →](PRICING.md)** | **[💎 Comprar versión completa →](https://gumroad.com/ancap-screensaver)**
 
 ## 📱 Compatibilidad
 

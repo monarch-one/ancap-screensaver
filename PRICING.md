@@ -1,4 +1,8 @@
-# 💰 ANCAP Screensaver - Simple Pricing
+# 💰 **ANCAP Screensaver - Pricing & Plans**
+
+> **Professional libertarian quotes screensaver with cross-platform support**
+
+---
 
 ## 🎯 **Choose Your Freedom Level**
 
@@ -13,6 +17,8 @@
 - ❌ No customization options
 - ❌ No premium quotes
 
+---
+
 ### 💎 **Full Version - "Anarcho-Capitalist"**
 **Price: $4.99** *(One-time payment)*
 - ✅ **Everything in Free** +
@@ -26,6 +32,8 @@
 - ✅ Multiple themes
 - ✅ Export/import settings
 
+---
+
 ## 🌟 **Special Offers**
 
 ### 🎁 **Founder's Discount**
@@ -37,6 +45,8 @@
 - **Students**: 75% off ($1.24 instead of $4.99)
 - **Libertarian organizations**: 50% off ($2.49 instead of $4.99)
 - **Academic institutions**: Bulk licensing available
+
+---
 
 ## 💳 **Payment Methods**
 
@@ -53,6 +63,8 @@
 - ✅ PayPal
 - ✅ Bank transfer
 - ✅ Support ongoing development
+
+---
 
 ## 🎯 **Value Proposition**
 
@@ -73,6 +85,8 @@
 - **Community**: Connect with fellow libertarians
 - **Demo**: Try 25 quotes for free, no limitations
 
+---
+
 ## 📊 **Pricing Strategy**
 
 ### **Competitive Analysis**
@@ -88,6 +102,8 @@
 - **Professionals**: 50M+ in business/finance
 - **Price sensitivity**: $4.99 is impulse-buy territory
 
+---
+
 ## 🚀 **Future Pricing**
 
 ### **Q2 2024**
@@ -100,6 +116,8 @@
 - Full version: $6.99 (price increase for new customers)
 - Early adopters: Keep $4.99 price forever
 - **Grandfather clause**: All existing customers keep their price
+
+---
 
 ## 💡 **Money-Back Guarantee**
 
@@ -128,5 +146,25 @@
 
 ---
 
+## 🔗 **Quick Links**
+
+- **[🆓 Try Free Demo](https://github.com/monarch-one/ancap-screensaver#readme)**
+- **[💎 Buy Full Version](https://gumroad.com/ancap-screensaver)**
+- **[📚 Documentation](https://github.com/monarch-one/ancap-screensaver#readme)**
+- **[🐛 Report Issues](https://github.com/monarch-one/ancap-screensaver/issues)**
+- **[💬 Community](https://github.com/monarch-one/ancap-screensaver/discussions)**
+
+---
+
 *"The best investment you can make is in yourself." - Warren Buffett*
 *"The best investment in freedom is supporting libertarian software." - ANCAP Team*
+
+---
+
+## 📈 **Project Stats**
+
+![GitHub stars](https://img.shields.io/github/stars/monarch-one/ancap-screensaver?style=social)
+![GitHub forks](https://img.shields.io/github/forks/monarch-one/ancap-screensaver?style=social)
+![GitHub issues](https://img.shields.io/github/issues/monarch-one/ancap-screensaver)
+![GitHub license](https://img.shields.io/github/license/monarch-one/ancap-screensaver)
+![GitHub last commit](https://img.shields.io/github/last-commit/monarch-one/ancap-screensaver)
