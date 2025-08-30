@@ -109,18 +109,18 @@
   </div>
 
   <script>
-    // Constantes y configuración
-    const IDIOMA_SISTEMA = navigator.language || navigator.userLanguage;
-    const ES_ESPANOL = IDIOMA_SISTEMA.startsWith('es');
-    const TIMEOUT_AUTOMATICO = 40000;
-    const DELAY_AUTOR = 500;
-    const DELAY_TRANSICION = 500;
-    const VELOCIDAD_TEXTO = 80;
-    const VELOCIDAD_AUTOR = 100;
+    // Constants and configuration
+    const SYSTEM_LANGUAGE = navigator.language || navigator.userLanguage;
+    const IS_SPANISH = SYSTEM_LANGUAGE.startsWith('es');
+    const AUTO_TIMEOUT = 40000;
+    const AUTHOR_DELAY = 500;
+    const TRANSITION_DELAY = 500;
+    const TEXT_SPEED = 80;
+    const AUTHOR_SPEED = 100;
     
-    console.log(`Idioma detectado: ${IDIOMA_SISTEMA}, usando ${ES_ESPANOL ? 'español' : 'inglés'}`);
+    console.log(`Language detected: ${SYSTEM_LANGUAGE}, using ${IS_SPANISH ? 'Spanish' : 'English'}`);
     
-    const frasesLibertariasIngles = [
+    const libertarianQuotesEnglish = [
       // Ludwig von Mises (10 citas)
       { texto: "They cannot spend except by taking out of the pockets of some people for the benefit of others.", autor: "Ludwig von Mises" },
       { texto: "Capitalism serves the masses through mass production systems.", autor: "Ludwig von Mises" },
@@ -290,7 +290,7 @@
       { texto: "The free market is the only system compatible with human nature and dignity.", autor: "Jesús Huerta de Soto" }
     ];
     
-    const frasesLibertariasEspanol = [
+    const libertarianQuotesSpanish = [
       // Ludwig von Mises (10 citas)
       { texto: "El capitalismo sirve a las masas mediante la producción masiva.", autor: "Ludwig von Mises" },
       { texto: "Las políticas intervencionistas del gobierno empeoran la situación, no la mejoran.", autor: "Ludwig von Mises" },
@@ -339,12 +339,12 @@
       
     ];
     
-    // Seleccionar el array según el idioma del sistema
-    const frasesLibertarias = ES_ESPANOL ? frasesLibertariasEspanol : frasesLibertariasIngles;
+    // Select array based on system language
+    const libertarianQuotes = IS_SPANISH ? libertarianQuotesSpanish : libertarianQuotesEnglish;
 
-    let ultimaFrase = null;
-    let fraseVisible = false;
-    let timeoutAutomatico = null;
+    let lastQuote = null;
+    let quoteVisible = false;
+    let autoTimeout = null;
     
     function pad(n) {
       return n.toString().padStart(2, '0');
@@ -370,99 +370,99 @@
       type();
     }
 
-    function mostrarFraseAleatoria() {
-      console.log('Intentando mostrar frase...');
+    function showRandomQuote() {
+      console.log('Attempting to show quote...');
       
-      // Cancelar timeout anterior si existe
-      if (timeoutAutomatico) {
-        clearTimeout(timeoutAutomatico);
-        timeoutAutomatico = null;
+      // Cancel previous timeout if exists
+      if (autoTimeout) {
+        clearTimeout(autoTimeout);
+        autoTimeout = null;
       }
       
-      let fraseSeleccionada;
+      let selectedQuote;
       do {
-        fraseSeleccionada = frasesLibertarias[Math.floor(Math.random() * frasesLibertarias.length)];
-      } while (fraseSeleccionada === ultimaFrase && frasesLibertarias.length > 1);
+        selectedQuote = libertarianQuotes[Math.floor(Math.random() * libertarianQuotes.length)];
+      } while (selectedQuote === lastQuote && libertarianQuotes.length > 1);
       
-      ultimaFrase = fraseSeleccionada;
-      console.log('Frase seleccionada:', fraseSeleccionada);
+      lastQuote = selectedQuote;
+      console.log('Selected quote:', selectedQuote);
       
-      const elementoFrase = document.getElementById('fraseLibertaria');
-      const textoFrase = document.getElementById('textoFrase');
-      const autorFrase = document.getElementById('autorFrase');
-      const logoGuardiaNocturna = document.getElementById('logoGuardiaNocturna');
+      const quoteElement = document.getElementById('fraseLibertaria');
+      const textElement = document.getElementById('textoFrase');
+      const authorElement = document.getElementById('autorFrase');
+      const logoElement = document.getElementById('logoGuardiaNocturna');
 
-      console.log('Mostrando frase:', fraseSeleccionada.texto);
+      console.log('Showing quote:', selectedQuote.texto);
       
-      // Función auxiliar para mostrar frase
-      const mostrarFrase = () => {
-        elementoFrase.classList.add('visible');
-        autorFrase.classList.add('visible');
-        
-                  // Efecto de máquina de escribir para el texto principal
-          typeWriter(textoFrase, fraseSeleccionada.texto, VELOCIDAD_TEXTO, function() {
-            // Cuando termine la cita, mostrar el autor
+              // Helper function to show quote
+        const showQuote = () => {
+          quoteElement.classList.add('visible');
+          authorElement.classList.add('visible');
+          
+          // Typewriter effect for main text
+          typeWriter(textElement, selectedQuote.texto, TEXT_SPEED, function() {
+            // When quote ends, show author
             setTimeout(() => {
-              typeWriter(autorFrase, "— " + fraseSeleccionada.autor, VELOCIDAD_AUTOR);
-            }, DELAY_AUTOR);
+              typeWriter(authorElement, "— " + selectedQuote.autor, AUTHOR_SPEED);
+            }, AUTHOR_DELAY);
           });
           
-          fraseVisible = true;
-          console.log(`${fraseVisible ? 'Nueva' : 'Primera'} frase con efecto de máquina de escribir`);
+          quoteVisible = true;
+          console.log(`${quoteVisible ? 'New' : 'First'} quote with typewriter effect`);
           
-          // Programar siguiente cambio automático
-          timeoutAutomatico = setTimeout(mostrarFraseAleatoria, TIMEOUT_AUTOMATICO);
+          // Schedule next automatic change
+          autoTimeout = setTimeout(showRandomQuote, AUTO_TIMEOUT);
         };
         
-        // Fade out de la frase actual
-        elementoFrase.classList.remove('visible');
-        autorFrase.classList.remove('visible');
+        // Fade out current quote
+        quoteElement.classList.remove('visible');
+        authorElement.classList.remove('visible');
         
-        // Mostrar nueva frase después de transición
-        setTimeout(mostrarFrase, DELAY_TRANSICION);
+        // Show new quote after transition
+        setTimeout(showQuote, TRANSITION_DELAY);
     }
 
-    function actualizar() {
+    function update() {
       const s = new Date().getSeconds();
       
-      // Mostrar frase cada 42 segundos (40 segundos visible + 2 segundos para transición)
-      if ((s % 42 === 0) && !fraseVisible) {
-        setTimeout(mostrarFraseAleatoria, DELAY_TRANSICION);
+      // Show quote every 42 seconds (40 seconds visible + 2 seconds for transition)
+      if ((s % 42 === 0) && !quoteVisible) {
+        setTimeout(showRandomQuote, TRANSITION_DELAY);
       }
     }
 
-    setInterval(actualizar, 1000);
-    actualizar();
+    setInterval(update, 1000);
+    update();
     
 
     
-    // Mostrar primera frase después de 2 segundos
-    setTimeout(mostrarFraseAleatoria, 2000);
+    // Show first quote after 2 seconds
+    setTimeout(showRandomQuote, 2000);
     
-    // Agregar listener para cambio manual de frases
+    // Add listener for manual quote change
     document.addEventListener('keydown', function(event) {
-      // Prevenir que ciertas teclas salgan del screensaver
+      // Prevent certain keys from exiting the screensaver
       if (event.key === ' ' || event.key === 'ArrowRight' || event.key === 'ArrowLeft' || event.key === 'Enter') {
         event.preventDefault();
         event.stopPropagation();
         
-        console.log('Tecla presionada:', event.key, '- Cambiando frase manualmente');
+        console.log('Key pressed:', event.key, '- Changing quote manually');
         
-        // Forzar cambio de frase inmediatamente
-        mostrarFraseAleatoria();
+        // Force quote change immediately
+        showRandomQuote();
         
         return false;
       }
       
-      // Para otras teclas, permitir el comportamiento normal (salir del screensaver)
+      // For other keys, allow normal behavior (exit screensaver)
     });
     
-    // También agregar listener para clicks (opcional)
+    // Also add listener for clicks (optional)
     document.addEventListener('click', function(event) {
       event.preventDefault();
       event.stopPropagation();
-      console.log('Click detectado - Cambiando frase manualmente');
-      mostrarFraseAleatoria();
+              console.log('Click detected - Changing quote manually');
+        showRandomQuote();
       return false;
     });
   </script>
