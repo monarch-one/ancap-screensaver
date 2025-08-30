@@ -32,6 +32,13 @@ chmod +x install-manual.sh
 sudo ./install-manual.sh
 ```
 
+**📱 Después de la instalación:**
+1. **Preferencias del Sistema** → **Escritorio y Protector de pantalla**
+2. **Pestaña "Protector de pantalla"**
+3. **Seleccionar "ANCAP"** de la lista
+4. **Configurar "Iniciar protector de pantalla después de"** (tiempo de inactividad)
+5. **Hacer clic en "Aceptar"**
+
 #### **🐧 Linux:**
 ```bash
 # Descarga el .zip y extrae
@@ -56,10 +63,10 @@ sudo chmod -R 755 /usr/share/ancap-screensaver/
 ### **Después de la instalación:**
 
 1. **Preferencias del Sistema** → **Escritorio y Protector de Pantalla**
-2. **Pestaña "Protector de Pantalla"**
+2. **Pestaña "Protector de pantalla"**
 3. **Seleccionar "ANCAP"** de la lista
-4. **Configurar tiempo de espera**
-5. **Hacer clic en "Aplicar"**
+4. **Configurar "Iniciar protector de pantalla después de"** (tiempo de inactividad)
+5. **Hacer clic en "Aceptar"**
 
 ---
 
