@@ -11,7 +11,7 @@
 ## Descarga
 
 ### 🚀 **DESCARGA TODO EN UNO:**
-**[📦 DESCARGAR TODOS LOS INSTALADORES](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip)** *(ZIP con macOS, Linux y Windows)*
+**[📦 DESCARGAR TODOS LOS INSTALADORES](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-Universal-v1.1.2.zip)** *(ZIP con macOS, Linux y Windows)*
 
 ### Instaladores individuales v1.1.1:
 
@@ -20,7 +20,7 @@
 | macOS | [ANCAP-Screensaver-macOS-v1.1.1.pkg](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-macOS-v1.1.1.pkg) | Instalador nativo |
 | Linux | [ANCAP-Screensaver-Linux-v1.1.1.zip](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-Linux-v1.1.1.zip) | Paquete con instrucciones |
 | Windows | [ANCAP-Screensaver-Windows-v1.1.1.zip](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-Windows-v1.1.1.zip) | Archivo .scr con archivos |
-| Universal | [ANCAP-Screensaver-Universal-v1.1.1.zip](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-Universal-v1.1.1.zip) | **Todos los instaladores (RECOMENDADO)** |
+| Universal | [ANCAP-Screensaver-Universal-v1.1.2.zip](https://github.com/monarch-one/ancap-screensaver/raw/main/installers/output/ANCAP-Screensaver-Universal-v1.1.2.zip) | **Todos los instaladores (RECOMENDADO)** |
 
 ### Instalación por Plataforma:
 
