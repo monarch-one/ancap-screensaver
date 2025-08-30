@@ -100,33 +100,28 @@ timeoutAutomatico = setTimeout(mostrarFraseAleatoria, 40000); // 40 segundos
 
 ## 💰 **Monetización & Soporte**
 
-### 🆓 **Versión Gratuita**
-- 50+ citas libertarias
-- Efecto máquina de escribir básico
+### 🆓 **Versión Gratuita (Demo)**
+- 25 citas libertarias (muestra del producto)
+- Efecto máquina de escribir completo
 - Soporte para múltiples idiomas
-- Código abierto completo
+- Experiencia limpia sin limitaciones técnicas
 
-### 💎 **Versión Premium** ($5/mes)
-- 100+ citas premium exclusivas
+### 💎 **Versión Completa** ($4.99 - Un solo pago)
+- 100+ citas libertarias completas
 - Opciones de personalización avanzadas
-- Soporte prioritario
-- Acceso temprano a nuevas funciones
+- Actualizaciones de por vida
+- Soporte técnico completo
 
-### 🚀 **Versión Enterprise** ($29.99/mes)
-- Citas personalizadas ilimitadas
-- Branding personalizado
-- Acceso a API
-- Soporte 24/7
-
-### 🌟 **¿Por qué pagar?**
+### 🌟 **¿Por qué pagar $4.99?**
 - **Calidad profesional** - Estándares Silicon Valley
-- **Actualizaciones regulares** - Nuevas citas mensuales
+- **Actualizaciones de por vida** - Nuevas citas y funciones
 - **Contenido exclusivo** - Sabiduría libertaria única
 - **Soporte técnico** - Ayuda cuando la necesites
-- **Comunidad** - Conecta con libertarios
+- **Pago único** - Sin suscripciones ni cargos recurrentes
+- **Prueba gratuita** - 25 citas gratis sin limitaciones
 
 **[Ver planes completos →](PRICING.md)**
-**[Soporte en GitHub →](https://github.com/sponsors/ancap-screensaver)**
+**[Comprar versión completa →](https://gumroad.com/ancap-screensaver)**
 
 ## 📱 Compatibilidad
 
